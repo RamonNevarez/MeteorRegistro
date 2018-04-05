@@ -29,7 +29,6 @@ function DireccionAnalistasCtrl($scope, $meteor, $reactive,  $state, toastr) {
 			return [{folioEstatus : "2", fechavisita: {$gte: rc.getReactively("fechaInicial"),$lt: rc.getReactively("fechaFinal")}}]
 	});
 	
-	
 	this.helpers({
 		folios : () => {
 		  	return Folios.find();

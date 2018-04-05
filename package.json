@@ -1,0 +1,26 @@
+{
+  "name": "verificaciones",
+  "version": "1.0.0",
+  "description": "Sistema de verificaciones",
+  "main": "index.js",
+  "dependencies": {
+    "babel-runtime": "^6.22.0",
+    "bcrypt": "^1.0.2",
+    "jquery": "^3.1.1",
+    "moment": "^2.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+ "start": "meteor run", "debug": "meteor run --inspect", "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rzamarripa/verificaciones.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rzamarripa/verificaciones/issues"
+  },
+  "homepage": "https://github.com/rzamarripa/verificaciones"
+}

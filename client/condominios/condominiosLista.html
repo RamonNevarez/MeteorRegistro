@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-12">
+        <h1 class="alge-title txt-color-blueDark">
+            <i class="fa fa-search fa-fw "></i>
+            Condominios
+        </h1>
+    </div>
+</div>
+<div class="well">
+    <div class="row">
+        <div class="col-sm-1">
+            <a href="./condominiosForm" class="btn btn-default btn-primary">
+                <i class="fa fa-plus"></i> Nuevo
+            </a> 
+
+            <!-- <a class="btn btn-primary" ui-sref="root.condominiosForm">
+                Nuevo
+            </a> -->
+        </div>
+    </div>
+</div>
+
+<div class="well">
+    <div class="row">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th style="text-align: center">No.</th>
+                    <th style="text-align: center">Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="objeto in conl.arreglo">
+                    <td style="width: 5%">{{$index + 1}}</td>
+                    <td>{{objeto.profile.nombreCompleto}}</td>
+                    <td style="width: 15%">
+                        <a href="#" ng-click="conl.verDatos(objeto)" class="[ btn btn-default ]">
+                            <i class="[ glyphicon glyphicon-eye-open ]"></i>
+                        </a>
+                        <a href="/condominiosForm/{{objeto._id}}" class="[ btn btn-default ]">
+                            <i class="[ glyphicon glyphicon-pencil ]"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>

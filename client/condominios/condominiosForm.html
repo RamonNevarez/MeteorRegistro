@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark" ng-show="!ver">
+            <i class="fa fa-pencil-square-o fa-fw "></i>
+            Condominios
+            <span>&gt; Nuevo
+            </span>
+        </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12" ng-show="!ver">
+        <a class="btn btn-primary" ui-sref="root.condominiosLista">
+            Lista Condominios
+        </a>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-sm-12">
+        <form name="formCondominio" class="form-horizontal" role="form" data-parsley-validate>
+            <h4>Domicilio</h4>
+            <div class="well">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="calleNum">Calle</label>
+                        <input type="text" class="form-control" id="calle" placeholder="Calle" ng-model="cond.objeto.calle" required>
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="calleNum">Número</label>
+                        <input type="text" class="form-control" id="numero" placeholder="Número" ng-model="cond.objeto.numero" required>
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="tel1">Tel. 1</label>
+                        <input type="text" class="form-control" id="tel1" placeholder="Teléfono 1" ng-model="cond.objeto.tel1" required>
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="tel2">Tel. 2</label>
+                        <input type="text" class="form-control" id="tel2" placeholder="Teléfono 2" ng-model="cond.objeto.tel2">
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="submit" ng-click="cond.guardar(cond.objeto, formCondominio)" value="Guardar" class="btn btn-primary" ng-show="cond.action">
+                    <input type="submit" ng-click="cond.actualizar(cond.condomino, formCondominio)" value="Actualizar" class="btn btn-primary"
+                        ng-show="!cond.action">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
